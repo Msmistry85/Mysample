@@ -14,13 +14,11 @@ export class LoginPage{
     }
     async goto(){
         await this.page.goto('https://rahulshettyacademy.com/loginpagePractise/');
-        //await this.page.goto('https://google.com');
+        
     }
     async LoginIntoPage(username: string, password: string){
         await this.UsernameInput.fill(username);
         await this.PasswordInput.fill(password);
         await this.LoginButton.click();
     }
-
-
 }

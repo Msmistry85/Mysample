@@ -24,12 +24,16 @@ test ('Testcase 02 : Successfull login and redirect to Home page',async({page})=
     //await expect(page.title()).toContain('ProtoCommerce');   
 });
 
-test.only('Testcase 03 list of all Inventory',async ({page})=>{
+test('Testcase 03 list of all Inventory',async ({page})=>{
 
     const LoginPage1 = new LoginPage(page)
     const HomePage1 = new HomePage(page)
     await LoginPage1.goto();
     await LoginPage1.LoginIntoPage('rahulshettyacademy','Learning@830$3mK2')
     await HomePage1.LoadAllInventory();
-    await page.pause;
+    page.pause;
 });
+
+//test.only('Testcase 03 E2E Scenario',async ({page})=>{
+
+//});

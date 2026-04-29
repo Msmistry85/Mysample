@@ -28,6 +28,8 @@ test ('assignemtn 1',async({page})=>{
      //const allevents = page.locator('event-card');
      //await expect(allevents.first()).toBeVisible();
      //console.log(allevents);
+     await page.locator('/html/body/main/div/div[2]/div/div[1]/input').fill('X-Mas Sales');
+     await page.locator('#book-now-btn').click();
      
       
 

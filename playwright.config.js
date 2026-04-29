@@ -12,7 +12,11 @@ import { defineConfig, devices } from '@playwright/test';
     timeout: 5000,
   },
 
-  reporter:'html',
+  reporter: [
+    ['html'],
+    ['line'],
+    ['allure-playwright']
+  ],
   use: {
   browserName: 'chromium'  
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */

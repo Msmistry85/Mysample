@@ -30,5 +30,5 @@ test('Testcase E2E scenario', async({page})=>{
     expect(await page.locator('.cartSection h3').textContent("ZARA COAT 3"))
 
     await page.locator('text=Checkout').click();
-    page.pause();
+    
 });
